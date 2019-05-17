@@ -49,7 +49,7 @@
         </div>
         
         <script src="{{ asset('js/backend_js/jquery.min.js') }}"></script>  
-        <script src="{{asset ('js/backend_js/matrix.login.js') }}"></script> 
+        <script src="{{ asset ('js/backend_js/matrix.login.js') }}"></script> 
     </body>
 
 </html>
