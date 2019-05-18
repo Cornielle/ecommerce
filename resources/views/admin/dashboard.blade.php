@@ -63,19 +63,19 @@
           <div class="widget-content nopadding collapse in" id="collapseG2">
             <ul class="recent-posts">
               <li>
-                <div class="user-thumb"> <img width="40" height="40" alt="User" src="C:\Users\brian\source\repos\ecommerce\resources\views\admin\img\backend_images\demo\av1.jpg"/> </div>
+                <div class="user-thumb"> <img width="40" height="40" alt="User"  src="{{ asset('/backend_images/demo/av1.jpg') }}"/> </div>
                 <div class="article-post"> <span class="user-info"> By: john Deo / Date: 2 Aug 2012 / Time:09:27 AM </span>
                   <p><a href="#">This is a much longer one that will go on for a few lines.It has multiple paragraphs and is full of waffle to pad out the comment.</a> </p>
                 </div>
               </li>
               <li>
-                <div class="user-thumb"> <img width="40" height="40" alt="User" src="{{ asset('backend_images/demo/av2.jpg') }}"> </div>
+                <div class="user-thumb"> <img width="40" height="40" alt="User" src="{{ asset('/backend_images/demo/av2.jpg') }}"> </div>
                 <div class="article-post"> <span class="user-info"> By: john Deo / Date: 2 Aug 2012 / Time:09:27 AM </span>
                   <p><a href="#">This is a much longer one that will go on for a few lines.It has multiple paragraphs and is full of waffle to pad out the comment.</a> </p>
                 </div>
               </li>
               <li>
-                <div class="user-thumb"> <img width="40" height="40" alt="User" src="{{ asset('backend_images/demo/av4.jpg') }}"> </div>
+                <div class="user-thumb"> <img width="40" height="40" alt="User" src="{{ asset('/backend_images/demo/av4.jpg') }}"> </div>
                 <div class="article-post"> <span class="user-info"> By: john Deo / Date: 2 Aug 2012 / Time:09:27 AM </span>
                   <p><a href="#">This is a much longer one that will go on for a few lines.Itaffle to pad out the comment.</a> </p>
                 </div>
