@@ -1,10 +1,37 @@
 
 $(document).ready(function(){
-	
-	$('input[type=checkbox],input[type=radio],input[type=file]').uniform();
-	
+	$("#current_pwd").keyup(function(){
+		let current_pwd = $("#current_pwd").val();
+		$.ajax({
+			type:'get',
+			url:'/admin/check-pwd',
+			contentType : 'application/json',
+			data:{current_pwd:current_pwd},
+			success:function(resp){
+				if(current_pwd.length > 5)
+					chkPwd(resp);
+			},error:function(){
+				if(current_pwd.length > 5)
+					console.log("Error");
+					chkPwd(resp);
+			}
+		});
+	});
+	function chkPwd(condition){
+		if(condition){
+			$("#chkPwd").css('color:green')
+			$("#chkPwd")[0].innerHTML = 'checking'				
+			$("#chkPwd")[0].innerHTML = 'Its correct!'
+		} 
+		else{ 
+			$("#chkPwd").css('color:red')
+			$("#chkPwd")[0].innerHTML = 'checking'			
+			$("#chkPwd")[0].innerHTML = 'Incorrect! please type it again'
+		} 
+	}
+	$('input[type=checkbox],input[type=radio],input[type=file]').uniform();	
 	$('select').select2();
-	
+
 	// Form Validation
     $("#basic_validate").validate({
 		rules:{
@@ -63,16 +90,21 @@ $(document).ready(function(){
 	
 	$("#password_validate").validate({
 		rules:{
-			pwd:{
+			current_pwd:{
 				required: true,
 				minlength:6,
 				maxlength:20
 			},
-			pwd2:{
+			new_pwd:{
+				required: true,
+				minlength:6,
+				maxlength:20
+			},
+			confirm_pwd:{
 				required:true,
 				minlength:6,
 				maxlength:20,
-				equalTo:"#pwd"
+				equalTo:"#confirm_pwd"
 			}
 		},
 		errorClass: "help-inline",
