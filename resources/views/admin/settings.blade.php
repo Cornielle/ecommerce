@@ -16,7 +16,6 @@
             <button type="button" class="close" data-dismiss="alert">x</button>
             <strong>{!! session('flash_message_yo') !!}</strong>
         </div>
-
   @endif   
   </div>
   <div class="container-fluid"><hr>

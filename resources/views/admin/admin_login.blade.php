@@ -23,7 +23,6 @@
                 <button type="button" class="close" data-dismiss="alert">x</button>
                 <strong>{!! session('flash_message_yo') !!}</strong>
             </div>
-
         @endif       
             <form id="loginform" class="form-vertical" method="post" action="{{ url('admin') }}">{{csrf_field()}}
 				 <div class="control-group normal_text"> <h3><img src="{{ asset ('backend_images/logo.png') }}" alt="Logo" /></h3></div>
